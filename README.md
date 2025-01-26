@@ -2,7 +2,6 @@
 
 Welcome the Scania Vehicle Status assignment.
 
-
 DB Settings in appsettings VehicleRepository.ConnectionString
 
 Run command in project Vehicle.Repository
@@ -29,6 +28,7 @@ Response:
 Status Code : 200 OK
 ```
 Response body: 
+```
 [
   {
     "id": 1,
@@ -80,7 +80,7 @@ Response body:
     "lastUpdatedDate": "2025-01-25T18:33:06.8"
   }
 ]
-
+```
 
 ```
 Get    http://localhost:5220/Vehicle/Customer?CustomerId=1
@@ -93,6 +93,7 @@ Response:
 Status Code : 200 OK
 ```
 Response body: 
+```
 [
   {
     "id": 1,
@@ -116,3 +117,4 @@ Response body:
     "lastUpdatedDate": "2025-01-25T18:33:06.7966667"
   }
 ]
+```
