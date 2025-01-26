@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Src\\Vehicle.Server\\Vehicle.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Src\\vehicle.client\\vehicle.client.esproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Src\\Vehicle.Ping.Simulator\\Vehicle.Ping.Simulator.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
