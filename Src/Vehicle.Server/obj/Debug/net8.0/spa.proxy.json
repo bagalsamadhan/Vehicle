@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:62644",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Projects\\Repos\\Src\\Test\\Src\\Vehicle.Server\\..\\vehicle.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

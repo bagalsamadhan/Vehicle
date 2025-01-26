@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5F+7ezaB2Mw=",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\Repos\\Src\\Test\\Src\\Vehicle.Ping.Simulator\\Vehicle.Ping.Simulator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\B924SQ\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
