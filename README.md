@@ -1,17 +1,34 @@
 # Vehicle Status
 
-Welcome the Scania Vehicle Status assignment.
+Welcome to the Vehicle Status assignment.
 
-DB Settings in appsettings VehicleRepository.ConnectionString
+Manual Steps : 
+Set 'Vehicle.Server' as start up project
 
-Run command in project Vehicle.Repository
+Update appsettings.jsom both in 'Vehicle.Server' and 'Vehicle.Ping.Simulator'
+```
+"VehicleRepository": {
+  "ConnectionString": "Database=Vehicle_v1;"
+}
+```
+
+Run command in Package Manager Console selecting project 'Vehicle.Repository'
 1. Add-Migration FirstMigration 
    Build started...
    Build succeeded.
 2. Update-Database
    Build started...
    Build succeeded.
-3. Run scrip on database 'VehicleSystemData_Insert.sql'
+3. Run scrip on database 'VehicleSystemData_Insert.sql' from 'Vehicle.Repository' Scirpts
+4. Right click solution -- > Properties, select Multiple start up projects
+   Vehicle.Server
+   vehicle.client
+   Vehicle.Ping.Simulator
+
+Run Project
+
+Troubleshoot : https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022
+Right Click project 'Vehicle.Server' properties, select Debug, 'Open debug launch profiles UI' select https, unselect Launch Browser
 
 # Available endpoints
 The endpoints can be tested using Swagger, Postman or ReadyAPI
