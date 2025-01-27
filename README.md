@@ -5,7 +5,12 @@ Welcome to the Vehicle Status assignment.
 Manual Steps : 
 Set 'Vehicle.Server' as start up project
 
-Update appsettings.jsom both in 'Vehicle.Server' and 'Vehicle.Ping.Simulator'
+Update appsettings.json in project as below
+```
+Vehicle.Server
+Vehicle.Ping.Simulator
+```
+
 ```
 "VehicleRepository": {
   "ConnectionString": "Database=Vehicle_v1;"
@@ -13,14 +18,15 @@ Update appsettings.jsom both in 'Vehicle.Server' and 'Vehicle.Ping.Simulator'
 ```
 
 Run command in Package Manager Console selecting project 'Vehicle.Repository'
-1. Add-Migration FirstMigration 
+1. Remove folder 'Migrations' from project
+2. Add-Migration FirstMigration 
    Build started...
    Build succeeded.
-2. Update-Database
+3. Update-Database
    Build started...
    Build succeeded.
-3. Run scrip on database 'VehicleSystemData_Insert.sql' from 'Vehicle.Repository' Scirpts
-4. Right click solution -- > Properties, select Multiple start up projects
+4. Run scrip on database 'VehicleSystemData_Insert.sql' from 'Vehicle.Repository' Scirpts
+5. Right click solution -- > Properties, select Multiple start up projects
    Vehicle.Server
    vehicle.client
    Vehicle.Ping.Simulator
