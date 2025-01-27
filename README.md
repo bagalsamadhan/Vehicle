@@ -5,7 +5,12 @@ Welcome to the Vehicle Status assignment.
 Manual Steps : 
 Set 'Vehicle.Server' as start up project
 
-Update appsettings.jsom both in 'Vehicle.Server' and 'Vehicle.Ping.Simulator'
+Update appsettings.jsom both in 
+```
+Vehicle.Server
+Vehicle.Ping.Simulator
+```
+
 ```
 "VehicleRepository": {
   "ConnectionString": "Database=Vehicle_v1;"
