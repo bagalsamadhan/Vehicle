@@ -1,0 +1,6 @@
+@Vehicle.Server_HostAddress = http://localhost:5220
+
+GET {{Vehicle.Server_HostAddress}}/vehicle/
+Accept: application/json
+
+###
