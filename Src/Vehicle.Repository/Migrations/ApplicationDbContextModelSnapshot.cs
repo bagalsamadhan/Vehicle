@@ -64,7 +64,7 @@ namespace Vehicle.Repository.Migrations
 
                     b.HasKey("CustomerId");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("Vehicle.Repository.Models.VehicleStatus", b =>
@@ -98,7 +98,7 @@ namespace Vehicle.Repository.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("VehicleStatuses");
+                    b.ToTable("VehicleStatuses", (string)null);
                 });
 
             modelBuilder.Entity("Vehicle.Repository.Models.VehicleStatusHistory", b =>
@@ -132,7 +132,7 @@ namespace Vehicle.Repository.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("VehicleStatusHistories");
+                    b.ToTable("VehicleStatusHistories", (string)null);
                 });
 
             modelBuilder.Entity("Vehicle.Repository.Models.VehicleStatus", b =>

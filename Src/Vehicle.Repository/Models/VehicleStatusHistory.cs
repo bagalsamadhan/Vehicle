@@ -1,17 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Vehicle.Repository.Models
+﻿namespace Vehicle.Repository.Models
 {
     public class VehicleStatusHistory
     {
-        public int Id { get; set; }
-        public int CustomerId { get; set; }
-        public virtual required Customer Customer { get; set; }
-        [MaxLength(100)]
-        public required string VehicleId { get; set; }
-        [MaxLength(10)]
-        public required string RegistrationNumber { get; set; }
+        public int Id { get; set; }       
+        public string VehicleId { get; set; } = null!;
+        public string RegistrationNumber { get; set; } = null!;
         public bool ConnectionStatus { get; set; }
         public DateTime LastUpdatedDate { get; set; }
+
+        public int CustomerId { get; set; }
+        public virtual required Customer Customer { get; set; }
     }
 }

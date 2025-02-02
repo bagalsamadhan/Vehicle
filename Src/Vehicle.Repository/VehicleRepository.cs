@@ -9,6 +9,7 @@ namespace Vehicle.Repository
         Task<IEnumerable<Models.VehicleStatus>> GetAllAsync();
         Task<IEnumerable<Models.VehicleStatus>> GetByCustomerIdAsync(int customerId);
         Task<IEnumerable<Models.VehicleStatus>> GetByCustomerNameAsync(string customerName);
+
         Task<bool> PingAsync(string vehicleId, bool connectionStatus);
     }
 
@@ -42,8 +43,7 @@ namespace Vehicle.Repository
 
         public async Task<bool> PingAsync(string vehicleId, bool connectionStatus)
         {
-            var vehicleStatus = await context.VehicleStatuses.
-                FirstOrDefaultAsync(s => s.VehicleId == vehicleId);
+            var vehicleStatus = await context.VehicleStatuses.FirstOrDefaultAsync(s => s.VehicleId == vehicleId);
 
             if (vehicleStatus == null)
                 return false;

@@ -19,32 +19,33 @@ namespace Vehicle.Server.Controllers
             this.mapper = mapper;
         }
 
-        [HttpGet(Name = "GetVehicle")]
-        public async Task<IEnumerable<VehicleStatus>> GetAsync()
+        [HttpGet(Name = "vehicle")]
+        public async Task<IEnumerable<VehicleStatus>> GetAllVehicleStatusAsync()
         {
-            var data = await vehicleService.GetAllVehicleStatusAsync();
+            var vehicleStatusList = await vehicleService.GetAllVehicleStatusAsync();
 
-            var VehicleStatusResponse = mapper.Map<IEnumerable<Repository.Models.VehicleStatus>, IEnumerable<VehicleStatus>>(data);
+            var VehicleStatusResponse = mapper.Map<IEnumerable<Repository.Models.VehicleStatus>, IEnumerable<VehicleStatus>>(vehicleStatusList);
 
             return VehicleStatusResponse;
         }
 
         [HttpGet]
-        [Route("Customer")]
+        [Route("customer")]
         public async Task<IEnumerable<VehicleStatus>> GetVehiclesByCustomerAsync([FromQuery] CustomerRequest request, CancellationToken cancellationToken)
         {
-            var data = await vehicleService.GetVehicleByCustomerAsync(request.CustomerId, request.CustomerName);
+            var vehicleStatusList = await vehicleService.GetVehicleByCustomerAsync(request.CustomerId, request.CustomerName);
 
-            var VehicleStatusResponse = mapper.Map<IEnumerable<Repository.Models.VehicleStatus>, IEnumerable<VehicleStatus>>(data);
+            var VehicleStatusResponse = mapper.Map<IEnumerable<Repository.Models.VehicleStatus>, IEnumerable<VehicleStatus>>(vehicleStatusList);
 
             return VehicleStatusResponse;
         }
 
         [HttpPost]
         [Route("ping")]
-        public async Task<IActionResult> PingVehicleAsync([FromBody] PingRequest request, CancellationToken cancellationToken)
+        public async Task<IActionResult> PingAsync([FromBody] PingRequest request, CancellationToken cancellationToken)
         {
             var success = await vehicleService.PingAsync(request.VehicleId, request.ConnectionStatus);
+
             if (!success)
                 return NotFound();
 

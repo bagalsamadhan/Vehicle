@@ -13,10 +13,10 @@ Update appsettings.jsom both in 'Vehicle.Server' and 'Vehicle.Ping.Simulator'
 ```
 
 Run command in Package Manager Console selecting project 'Vehicle.Repository'
-1. Add-Migration FirstMigration 
+1. EntityFrameworkCore\Add-Migration FirstMigration 
    Build started...
    Build succeeded.
-2. Update-Database
+2. EntityFrameworkCore\Update-Database
    Build started...
    Build succeeded.
 3. Run scrip on database 'VehicleSystemData_Insert.sql' from 'Vehicle.Repository' Scirpts

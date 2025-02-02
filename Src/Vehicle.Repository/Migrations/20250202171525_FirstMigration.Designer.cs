@@ -12,7 +12,7 @@ using Vehicle.Repository.Services;
 namespace Vehicle.Repository.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250202125131_FirstMigration")]
+    [Migration("20250202171525_FirstMigration")]
     partial class FirstMigration
     {
         /// <inheritdoc />
@@ -67,7 +67,7 @@ namespace Vehicle.Repository.Migrations
 
                     b.HasKey("CustomerId");
 
-                    b.ToTable("Customers");
+                    b.ToTable("Customers", (string)null);
                 });
 
             modelBuilder.Entity("Vehicle.Repository.Models.VehicleStatus", b =>
@@ -101,7 +101,7 @@ namespace Vehicle.Repository.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("VehicleStatuses");
+                    b.ToTable("VehicleStatuses", (string)null);
                 });
 
             modelBuilder.Entity("Vehicle.Repository.Models.VehicleStatusHistory", b =>
@@ -135,7 +135,7 @@ namespace Vehicle.Repository.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("VehicleStatusHistories");
+                    b.ToTable("VehicleStatusHistories", (string)null);
                 });
 
             modelBuilder.Entity("Vehicle.Repository.Models.VehicleStatus", b =>
